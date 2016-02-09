@@ -1,7 +1,7 @@
 // Javascript Code.
-var myApp = angular.module('app', []);
+var app = angular.module('app', []);
 
-myApp.controller('PasswordController', function PasswordController($scope) {
+app.controller('PasswordController', function PasswordController($scope) {
   $scope.title = "This is AngularJS and Jasmin!";
   $scope.password = '';
   $scope.grade = function() {
@@ -17,5 +17,13 @@ myApp.controller('PasswordController', function PasswordController($scope) {
 });
 
 
+app.controller("MainController", function($scope, $http){
+  $http.get("http://ws.audioscrobbler.com/2.0/?method=chart.getTopTracks&api_key=da38c0fa01ea26827dd79dcd3457804a&format=json")
+    .success(function(data){
+      $scope.datatracks = data["tracks"]["track"];
+    })
+    .error(function(err){
+      return err;
+    });
 
-//http://ws.audioscrobbler.com/2.0/?method=chart.getTopTracks&api_key=da38c0fa01ea26827dd79dcd3457804a&format=json
+});
