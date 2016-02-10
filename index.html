@@ -20,27 +20,39 @@
   </head>
 
   <body ng-controller="MainController">
-    <table border="1">
-
-        <tr>
-          <th>Artist</th>
-          <th>Song</th>
-          <th>Duration</th>
-          <th>Play Count</th>
-          <th>Listeners</th>
-          <th>Photo</th>
-        </tr>
-        <tr ng-repeat="track in datatracks">
-          <td>{{track["artist"]["name"]}}</td>
-          <td>{{track["name"]}}</td>
-          <td>{{track["duration"]}} seg</td>
-          <td>{{track["playcount"]}}</td>
-          <td>{{track["listeners"]}}</td>
-          <td> 
-            <img ng-src='{{track["image"][0]["#text"]}}'>
-          </td>
-        </tr>
-    </table>
+    <div class="input">
+        <input type="text" placeholder="S" ng-model="query">
+    </div>
+    <div class="ToCenter">
+        <table>
+            <tr>
+                <th>
+                    <a href="#" ng-click="To_Order='artist.name'">Artist </a>
+                </th>
+                <th> 
+                    <a href="#" ng-click="To_Order='name'">Song</a>
+                </th>
+                <th>Duration</th>
+                <th> 
+                    <a href="#" ng-click="To_Order='playcount'">Play Count</a>
+                </th>
+                <th> 
+                    <a href="#" ng-click="To_Order='listeners'">Listeners</a>
+                </th>
+                <th>Photo</th>
+            </tr>
+            <tr ng-repeat="track in datatracks | filter:query | orderBy: To_Order">
+                <td>{{track["artist"]["name"]}}</td>
+                <td>{{track["name"]}}</td>
+                <td>{{track["duration"]}} seg</td>
+                <td>{{track["playcount"]}}</td>
+                <td>{{track["listeners"]}}</td>
+                <td> 
+                    <img ng-src='{{track["image"][3]["#text"]}}'>
+                </td>
+            </tr>
+        </table>
+    </div>
 
   </body>
 </html>

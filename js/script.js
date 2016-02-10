@@ -26,4 +26,5 @@ app.controller("MainController", function($scope, $http){
       return err;
     });
 
+    $scope.To_Order = "";
 });
