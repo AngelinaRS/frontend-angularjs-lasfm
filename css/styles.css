@@ -1,3 +1,7 @@
+body{
+	margin: 0;
+}
+
 td, th {
 	text-align: center;
 }
@@ -7,33 +11,33 @@ img {
 	height: 50px;
 }
 
+div {
+	height: 2%;
+	width: 100%;
+	background-color: red;
+}
+
 .input {
+	width: 30%;
+	float: right;
+	margin-top: 2%;
 	margin-bottom: 3%;
-}
-
-input {
-	width: 20em;
-	height: 2em;
-}
-
-.ToCenter {
-	text-align: center;
-}
-
-.ToCenter table {
-	margin: 0 auto;
-	text-align: left;
+	margin-right: 10%;
 }
 
 th, td {
-	border: 1px solid #90EE90;
-	background-color: #9ACD32;
+	border: 1px solid white;
+	background-color: rgb(255,51,51);
 }
 
 table {
-	border: 2px solid green;
+	border: 2px solid black;
 	border-collapse: collapse;
-	width: 100%;
+	width: 75%;
+}
+
+tbody {
+	margin-bottom: 10%;
 }
 
 a {
