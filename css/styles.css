@@ -19,16 +19,18 @@ img {
 	top: 0;
 }
 
-.box-order {
-	margin-left: 48%;
-	margin-top: 5px;
+fieldset {
+	height: 75px;
+	margin-left: 45%;
+
 }
 
-.input {
+input {
 	width: 30%;
 	float: right;
 	margin-bottom: 2%;
 	margin-right: 10%;
+	margin-top: 2%;
 }
 
 select {
@@ -36,10 +38,13 @@ select {
 	background-color: black;
 	color: white;
 	border: 1px solid black;
+	display: inline-block;
+	margin-left: 45%;
+	margin-top: 2%;
 }
 
 option {
-	background-color: gray;
+	background-color: rgb(128,128,128);
 }
 
 th, td {
@@ -50,11 +55,12 @@ th, td {
 table {
 	border: 2px solid black;
 	border-collapse: collapse;
-	width: 100%;
+	width: 90%;
 	margin-top: 7%;
+	margin-left: 5%;
+	margin-bottom: 1%;
 }
 
 thead {
 	margin-bottom: 10%;
 }
-
