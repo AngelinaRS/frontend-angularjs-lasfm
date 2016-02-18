@@ -20,11 +20,11 @@ app.controller('PasswordController', function PasswordController($scope) {
 app.controller("MainController", function($scope, $http){
   $http.get("http://ws.audioscrobbler.com/2.0/?method=chart.getTopTracks&api_key=da38c0fa01ea26827dd79dcd3457804a&format=json")
     .success(function(data){
-      $scope.datatracks = data["tracks"]["track"];
+      $scope.datatracks = data["tracks"]["track"]; //takes the information from json
     })
     .error(function(err){
       return err;
     });
 
-    $scope.To_Order = "";
+    $scope.To_Order = ""; //Variable to order the data
 });
